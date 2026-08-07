@@ -1,6 +1,8 @@
 import telebot
 from config import BOT_TOKEN
 from keyboards import main_menu
+from database import create_table, add_user
+
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
