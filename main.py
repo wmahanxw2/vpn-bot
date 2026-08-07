@@ -6,10 +6,12 @@ bot = telebot.TeleBot(BOT_TOKEN)
 
 @bot.message_handler(commands=["start"])
 def start(message):
-    bot.reply_to(
-        message,
+    bot.send_message(
+        message.chat.id,
         "👋 سلام\n\n"
-        "به ربات فروش VPN خوش اومدی."
+        "به ربات فروش VPN خوش آمدید.\n"
+        "یکی از گزینه‌ها را انتخاب کنید:",
+        reply_markup=main_menu()
     )
 
 print("Bot Started...")
