@@ -1,5 +1,6 @@
 import telebot
 from config import BOT_TOKEN
+from keyboards import main_menu
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
